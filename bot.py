@@ -48,7 +48,8 @@ init_color_it()
 
 
 # login to instagram
-with open('./accounts.json') as f:
+dir_path = os.path.dirname(os.path.realpath(__file__))
+with open(dir_path + '/accounts.json') as f:
     data = json.load(f)
     accounts = data
 
@@ -113,4 +114,5 @@ while len(feed['items']) != 0:
             continue
 
     if len(feed['items']) == 0:
+        print('regenerating feed...')
         feed = client.feed_tag('blacklivesmatter', client.generate_uuid())
