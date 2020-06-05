@@ -13,7 +13,7 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 feed = []
 contains_comment = False
-end_line = 'If you want other ways to help please check out @blm_tag_bot. Thank you :)'
+end_line = 'If you want other ways to help please check out blacklivesmatters.carrd.co Thank you :)'
 comments = [
     'Hi, please dont use the blacklivesmatter tag as it is currently blocking important info from being shared. ' +
     'Please delete and repost with #BlackoutTuesday instead (Editing the caption wont work). ' +
