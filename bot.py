@@ -61,17 +61,6 @@ feed = client.feed_tag('blacklivesmatter', client.generate_uuid())
 print('Found ' + str(feed['num_results']) + ' images. \n')
 
 
-def create_new_client():
-    next_idx = account_index + 1
-    # reset if at end of accounts
-    if next_idx > len(accounts) - 1:
-        next_idx = 0
-
-    account_index = next_idx
-    acc = accounts[account_index]
-    client = Client(acc['username'], acc['password'])
-
-
 # Goes over the pictures in the black lives matter hashtag
 while len(feed['items']) != 0:
     post = feed['items'].pop(0)
@@ -108,7 +97,14 @@ while len(feed['items']) != 0:
         except Exception as e:
             if hasattr(e, 'error_response') and 'spam": true,' in e.error_response:
                 print(color("Error : Commented too many times. \n", colors.RED))
-                create_new_client()
+                next_idx = account_index + 1
+                # reset if at end of accounts
+                if next_idx > len(accounts) - 1:
+                    next_idx = 0
+
+                account_index = next_idx
+                acc = accounts[account_index]
+                client = Client(acc['username'], acc['password'])
             else:
                 print(color(repr(e) + '\n', colors.RED))
             continue
