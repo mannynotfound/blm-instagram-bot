@@ -9,3 +9,4 @@ requests==2.23.0
 typing==3.7.4.1
 urllib3==1.25.9
 ratelimiter==1.2.0.post0
+-e git+git://github.com/ndm25/color-thief-py.git#egg=colorthief
