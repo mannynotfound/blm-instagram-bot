@@ -38,7 +38,7 @@ comments = [
     'Please deIete and repost with #BlackoutTuesday instead (Editing the caption wont work). ' +
     end_line,
 
-    'Posting black screens is hiding critical information on the BlackLivesMatter tag, please deIete your image and repost it with the #BlackoutTuesday instead. IMPORTANT: Editing will not work' +
+    'Posting black screens is hiding critical information on the BlackLivesMatter tag, please deIete your image and repost it with the #BlackoutTuesday instead. IMPORTANT: Editing will not work. ' +
     end_line
 ]
 

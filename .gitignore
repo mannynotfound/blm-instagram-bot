@@ -3,3 +3,4 @@ accounts.json
 .gitignore
 test.*
 .vs/
+src/
